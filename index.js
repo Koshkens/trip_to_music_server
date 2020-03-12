@@ -1,29 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3000
-const clientUrl = '*'
-
-
-
-
-app.options('*', (req, res) => {
-    res.set('Access-Control-Allow-Origin', clientUrl);
-    res.set("Access-Control-Allow-Headers", "Content-Type");
-    res.send('ok');
-});
+const port = server.listen(process.env.PORT || 3000);
+const clientUrl = '*';
 
 app.get('/', (req, res) => {
     res.send("Hello")
-})
-
-
-app.get('/json', (req, res) => {
-    res.set('Access-Control-Allow-Origin', clientUrl)
-    res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
-    res.set('Access-Control-Allow-Headers', 'Content-Type')
-    res.send(JSON.stringify({
-        message: 'This is public info'
-    }))
 })
 
 app.listen(port, (err) => {
