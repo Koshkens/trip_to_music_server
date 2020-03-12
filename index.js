@@ -5,4 +5,4 @@ const clientUrl = '*';
 
 app.use(express.static("public"))
 
-app.listen(8080 || process.env.PORT, () => console.log(`All OK`))
+app.listen(process.env.PORT || 8080, () => console.log(`All OK`))
