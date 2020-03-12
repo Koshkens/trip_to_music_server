@@ -1,1 +1,1 @@
-Site for trip-to-music.com
+Server for trip-to-music.com

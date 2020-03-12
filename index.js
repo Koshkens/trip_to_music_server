@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 80
-const clientUrl = 'http://localhost:3000'
+const clientUrl = '*'
 
 
 
