@@ -12,6 +12,11 @@ app.options('*', (req, res) => {
     res.send('ok');
 });
 
+app.get('/', (req, res) => {
+    res.send("Hello")
+})
+
+
 app.get('/json', (req, res) => {
     res.set('Access-Control-Allow-Origin', clientUrl)
     res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
